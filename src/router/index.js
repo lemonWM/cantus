@@ -67,5 +67,11 @@ export default new Router({
       name: 'albums&records',
       component: () => import(/* webpackChunkName: "about" */ '../views/AlbumsRecords.vue')
     },
+    {
+      path: '/product/:id',
+      name: 'product',
+      component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProduct.vue'),
+      props: true
+    },
     ]
 })

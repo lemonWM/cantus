@@ -5,22 +5,16 @@
         </div>
         <div class="grid-x grid-padding-x align-center-middle text-center">
             <div v-for="(product, index) in productSelected" :key="index" class="single-product">
-                <router-link :to="{}" class="cell small-4 single-container">
-                    <div class="main-product-content">
-                        <img :src="product.photos[0]" alt="">
-                        <p>{{product.product}}</p>
-                        <p>{{product.producent}}</p>
-                        <div class="product-hover">
-                            <p>{{product.price}}</p>
-                        </div>
-                    </div>
-                </router-link>
+                <single :product='product'/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+import single from '../page_instruments/mainSingle'
+
 export default {
     name: 'main-instrument-content',
     data() {
@@ -52,5 +46,9 @@ export default {
             })
         }
     },
+    components: {
+        single
+    }
 }
 </script>
+
