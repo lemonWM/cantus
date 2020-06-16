@@ -1,0 +1,18 @@
+{
+    "producent": "Shure Beta",
+    "product": "87A Supercardioid Condenser Microphone",
+    "price": "250$",
+    "photos": [
+        
+    ],
+    "details": "The Shure Beta 87A is a premium quality supercardioid hand-held electret condenser vocal microphone with exceptionally smooth frequency response and high sound pressure level capability. The Beta 87A is used for professional sound reinforcement, broadcasting, and studio recording applications.The Beta 87A combines superb performance with the ruggedness needed for touring and field production.",
+    "features": [
+        "Smooth frequency response with gradual presence rise",
+        "Highly consistent supercardioid polar pattern provides superior gain-before-feedback",
+        "Electronic low-frequency roll-off compensates for proximity effect ",
+        "Wide dynamic range (117 dB) and low distortion characteristics ",
+        "Very low susceptibility to RFI and electromagnetic hum"
+    ],
+    "stack": 5,
+    "category": "microphones"
+}
