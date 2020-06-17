@@ -8,6 +8,8 @@ export const getProducts = {
     },
     created() {
 
+        this.$store.state.productsSelected = []
+
         this.axios.get(`/products${window.location.pathname}`) 
         .then(({ data })=> {
 
