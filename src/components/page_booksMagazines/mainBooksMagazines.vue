@@ -1,7 +1,7 @@
 <template>
     <div class="flex-container flex-dir-column categories-wrapper">
         <div class="header align-center-middle text-center">
-            <h3>All instruments</h3>
+            <h3>Top books & magazines</h3>
         </div>
         <div class="grid-x grid-padding-x align-center-middle text-center">
             <div v-for="(product, index) in productSelected" :key="index" class="single-product">
@@ -17,17 +17,16 @@ import single from '../page_instruments/mainSingle'
 import {getProducts} from '../../mixins/mixins'
 
 export default {
-    name: 'main-instrument-content',
+    name: 'main-lightning-content',
     mixins:[getProducts],
     data() {
         return {
             
         }
     },
-    
+
     components: {
         single
     }
 }
 </script>
-

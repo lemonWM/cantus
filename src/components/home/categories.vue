@@ -58,7 +58,11 @@ export default {
 </script>
 
 <style scoped>
-
+h3{
+    font-family: 'Great Vibes', cursive;
+    font-size: 46px;
+    font-weight: 500;
+}
 .categories-wrapper{
     margin: 100px 15%;
 }

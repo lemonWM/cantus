@@ -26,7 +26,6 @@ export default {
 
             return this.product.producent +'/'+ url
         }
-
     },
 }
 </script>

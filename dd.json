@@ -1,18 +1,19 @@
 {
-    "producent": "Shure Beta",
-    "product": "87A Supercardioid Condenser Microphone",
-    "price": "250$",
+    "producent": "Gibson",
+    "product": "Custom Shop 1939 J-55",
+    "price": "5000$",
     "photos": [
-        
+        "https://res.cloudinary.com/donmoqxem/image/upload/v1592400217/cantus/products/gbcsrs5539vs-xl-02_uxdu1t.jpg",
+        "https://res.cloudinary.com/donmoqxem/image/upload/v1592400217/cantus/products/gbcsrs5539vs-xl_rjnvsh.jpg",
+        "https://res.cloudinary.com/donmoqxem/image/upload/v1592400217/cantus/products/gbcsrs5539vs-xl-03_jsgmea.jpg"
     ],
-    "details": "The Shure Beta 87A is a premium quality supercardioid hand-held electret condenser vocal microphone with exceptionally smooth frequency response and high sound pressure level capability. The Beta 87A is used for professional sound reinforcement, broadcasting, and studio recording applications.The Beta 87A combines superb performance with the ruggedness needed for touring and field production.",
+    "details": "Extremely sought after for decades since its original release, the 1939 J-55 delivers an aura of sound with an incredible dynamic range, warm mids, and a tight punchy bass. It excels in the woody ambience good Gibson guitars are known for",
     "features": [
-        "Smooth frequency response with gradual presence rise",
-        "Highly consistent supercardioid polar pattern provides superior gain-before-feedback",
-        "Electronic low-frequency roll-off compensates for proximity effect ",
-        "Wide dynamic range (117 dB) and low distortion characteristics ",
-        "Very low susceptibility to RFI and electromagnetic hum"
+        "Thermally Aged Red Spruce Vintage Sunburst Top ",
+        "Traditional Advanced Hand-Scalloped Red Spruce Hide Glue Top Bracing ",
+        "Terraced Fire Stripe Pickguard ",
+        "Gibson Jumbo Archtop Hardshell Case "
     ],
-    "stack": 5,
-    "category": "microphones"
+    "stack": 2,
+    "category": "Instruments"
 }

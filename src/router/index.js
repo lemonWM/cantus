@@ -48,24 +48,19 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ '../views/SoundEquipments.vue')
     },
     {
-      path: '/Lighting&effects',
+      path: '/Lighting_effects',
       name: 'lighting_effects',
       component: () => import(/* webpackChunkName: "about" */ '../views/LightingEffects.vue')
     },
     {
-      path: '/Books&magazines',
-      name: 'books&magazines',
+      path: '/Books_magazines',
+      name: 'books_magazines',
       component: () => import(/* webpackChunkName: "about" */ '../views/BooksMagazines.vue')
     },
     {
       path: '/Microphones',
       name: 'microphones',
       component: () => import(/* webpackChunkName: "about" */ '../views/Microphones.vue')
-    },
-    {
-      path: '/Albums&records',
-      name: 'albums&records',
-      component: () => import(/* webpackChunkName: "about" */ '../views/AlbumsRecords.vue')
     },
     {
       path: '/product/:id',
