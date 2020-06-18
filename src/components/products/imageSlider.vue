@@ -31,3 +31,11 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+
+img{
+    max-height: 800px;
+}
+
+</style>

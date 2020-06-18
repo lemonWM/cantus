@@ -66,7 +66,21 @@ export default new Router({
       path: '/product/:id',
       name: 'product',
       component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProduct.vue'),
-      props: true
+      props: true,
+      children: [
+        {
+          path:'details',
+          name: 'details',
+          props: true,
+          component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProductDetails.vue'),
+        },
+        {
+          path:'features',
+          name: 'features',
+          props: true,
+          component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProductFeatures.vue'),
+        }
+      ]
     },
     ]
 })
