@@ -1,7 +1,12 @@
 <template>
-    <div class="grid-x grid-padding-x align-middle align-center-middle products-wrapper">
-        <div v-for="(product, index) in products" :key="product._id" class="single-product cell small-3">
-            <single :product='product'/>
+    <div class="flex-container flex-dir-column">
+        
+        <search  @select='selected'/>
+
+        <div class="grid-x grid-padding-x align-center-middle products-wrapper">
+            <div v-for="(product, index) in products" :key="product._id" class=" single-products">
+                <single :product='product' />
+            </div>
         </div>
     </div>
 </template>
@@ -9,6 +14,7 @@
 <script>
 
 import single from '../page_instruments/mainSingle'
+import search from '../shop/search'
 import {getProducts} from '../../mixins/mixins'
 
 export default {
@@ -16,14 +22,20 @@ export default {
     mixins: [getProducts],
     data() {
         return {
-            
+            sortBy: ''
         }
     },
     computed: {
         
         products(){
 
-            return this.$store.state.productsAll
+            if( this.sortBy === ''){
+                
+                return this.$store.state.productsAll 
+            } else {
+
+                return this.$store.getters.getSelectedProducts(this.sortBy)
+            }
         }
     },
     created() {
@@ -44,9 +56,14 @@ export default {
             this.$store.commit('setProducts', {
                 products: data
             })
+        },
+        selected(event){
+
+            this.sortBy = event
         }
     },
     components: {
+        search,
         single
     }
 }

@@ -5,7 +5,7 @@
         <router-link :to="{name: 'home'}">HOME</router-link>
         <router-link :to="{name: 'shop'}">SHOP</router-link>
         <router-link :to="{name: 'gallery'}">GALLERY</router-link>
-        <router-link :to="{name: 'albums'}">ALBUMS</router-link>
+        <router-link :to="{name: 'Albums'}">ALBUMS</router-link>
       </div>
       <div id="nav" class="menu align-center logo-home">
         <router-link :to="{name: 'home'}">

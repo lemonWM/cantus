@@ -10,7 +10,7 @@ export const getProducts = {
 
         this.$store.state.productsSelected = []
 
-        this.axios.get(`/products${window.location.pathname}`) 
+        this.axios.get(`/Products${window.location.pathname}`) 
         .then(({ data })=> {
 
             this.setProductSelected(data)

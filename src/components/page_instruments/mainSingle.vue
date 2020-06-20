@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{name: 'product' , params: {id: url, product: product}}"  
+    <router-link :to="{name: 'Product' , params: {id: url, product: product}}"  
                     class="cell small-4 single-container">
             <div class="main-product-content">
                 <img :src="product.photos[0]" alt="">

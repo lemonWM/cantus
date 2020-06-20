@@ -24,7 +24,7 @@ export default new Router({
     },
     {
       path: '/Albums',
-      name: 'albums',
+      name: 'Albums',
       component: () => import(/* webpackChunkName: "about" */ '../views/Albums.vue')
     },
     {
@@ -39,43 +39,43 @@ export default new Router({
     },
     {
       path: '/Instruments',
-      name: 'instruments',
+      name: 'Instruments',
       component: () => import(/* webpackChunkName: "about" */ '../views/Instruments.vue')
     },
     {
       path: '/Sound_equipments',
-      name: 'sound_equipments',
+      name: 'Sound_equipments',
       component: () => import(/* webpackChunkName: "about" */ '../views/SoundEquipments.vue')
     },
     {
       path: '/Lighting_effects',
-      name: 'lighting_effects',
+      name: 'Lighting_effects',
       component: () => import(/* webpackChunkName: "about" */ '../views/LightingEffects.vue')
     },
     {
       path: '/Books_magazines',
-      name: 'books_magazines',
+      name: 'Books_magazines',
       component: () => import(/* webpackChunkName: "about" */ '../views/BooksMagazines.vue')
     },
     {
       path: '/Microphones',
-      name: 'microphones',
+      name: 'Microphones',
       component: () => import(/* webpackChunkName: "about" */ '../views/Microphones.vue')
     },
     {
-      path: '/product/:id',
-      name: 'product',
+      path: '/Product/:id',
+      name: 'Product',
       component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProduct.vue'),
       props: true,
       children: [
         {
-          path:'details',
+          path:'Details',
           name: 'details',
           props: true,
           component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProductDetails.vue'),
         },
         {
-          path:'features',
+          path:'Features',
           name: 'features',
           props: true,
           component: () => import(/* webpackChunkName: "about" */ '../components/products/singleProductFeatures.vue'),
