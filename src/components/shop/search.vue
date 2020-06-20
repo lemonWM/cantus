@@ -15,7 +15,6 @@ export default {
             value: ''
         }
     },
-
     methods: {
 
         setProducts(data){
