@@ -1,8 +1,9 @@
 <template>
     <div class="flex-container flex-dir-column">
-        
-        <search  @select='selected'/>
-
+        <div class="grid-x ">
+            <search class="columns small-6"/>
+            <sort class="columns small-6"  @select='selected'/>        
+        </div>
         <div class="grid-x grid-padding-x align-center-middle products-wrapper">
             <div v-for="(product, index) in products" :key="product._id" class=" single-products">
                 <single :product='product' />
@@ -15,6 +16,7 @@
 
 import single from '../page_instruments/mainSingle'
 import search from '../shop/search'
+import sort from '../shop/sort'
 import {getProducts} from '../../mixins/mixins'
 
 export default {
@@ -63,6 +65,7 @@ export default {
         }
     },
     components: {
+        sort,
         search,
         single
     }
