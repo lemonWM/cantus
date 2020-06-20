@@ -9,5 +9,9 @@ export default{
     setProductSelected(state, payload){
 
         state.productsSelected = payload.products
+    },
+    setProducts(state, payload){
+
+        state.productsAll = payload.products
     }
 }

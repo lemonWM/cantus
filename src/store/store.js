@@ -11,7 +11,8 @@ export default new Vuex.Store({
 
     state: {
         categories: [],
-        productsSelected: []
+        productsSelected: [],
+        productsAll: [],
     },
     getters,
     mutations,

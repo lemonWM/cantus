@@ -16,9 +16,8 @@
                 <div>
                     <router-link :to="{name: 'details',  params: {details: productSingle.details}}">DETAILS</router-link>
                      <router-link :to="{name: 'features',  params: {features: productSingle.features, productName: productSingle.product}}">FEATURES </router-link>
-                    <router-view></router-view>
+                    <router-view ></router-view>
                 </div>
-
             </div>
         </div>
     </div> 

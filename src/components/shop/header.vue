@@ -1,21 +1,16 @@
 <template>
-    <div class="shop flex-container flex-dir-column">
-        <headerShop />
-        <productsAll />
-    </div>
+    <div class="flex-container flex-dir-column shop-header">
+        <img src='../../../public/img/header2.jpg' alt="" class="img-responsive">
+        <div class="flex-container flex-dir-row title-header">
+            <h2 class="title-logo">Cantus <span>shop with quality stuff</span></h2>
+        </div>
+        <div class="shadow"></div>
+    </div> 
 </template>
 
 <script>
-
-import headerShop from '../components/shop/header'
-import productsAll from '../components/shop/productsAll'
-
 export default {
-    name: 'shop',
-    components:{
-        headerShop,
-        productsAll
-    }
+    name: 'shop-header'
 }
 </script>
 
@@ -25,7 +20,7 @@ img{
     min-height: 180px;
 }
 
-.home-header{
+.shop-header{
     position: relative;
     justify-content: center;
     align-items: center;

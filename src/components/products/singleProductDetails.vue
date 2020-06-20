@@ -1,5 +1,7 @@
 <template>
-    <div>{{details}}</div>
+    <div class="flex-container flex-dir-column align-self-top">
+        <p class="cell small-4">{{details}}</p>
+    </div>
 </template>
 
 <script>
