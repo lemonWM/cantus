@@ -24,6 +24,11 @@
                 </div>
             </div>
         </form>
+        <div>
+        <p>If you don't have an account, no problem. 
+            <router-link :to="{name: 'register'}"> Create an account now.</router-link>
+        </p>
+        </div>
     </div>
 </template>
 
