@@ -1,19 +1,7 @@
 {
-    "producent": "Gibson",
-    "product": "Custom Shop 1939 J-55",
-    "price": "5000$",
-    "photos": [
-        "https://res.cloudinary.com/donmoqxem/image/upload/v1592400217/cantus/products/gbcsrs5539vs-xl-02_uxdu1t.jpg",
-        "https://res.cloudinary.com/donmoqxem/image/upload/v1592400217/cantus/products/gbcsrs5539vs-xl_rjnvsh.jpg",
-        "https://res.cloudinary.com/donmoqxem/image/upload/v1592400217/cantus/products/gbcsrs5539vs-xl-03_jsgmea.jpg"
-    ],
-    "details": "Extremely sought after for decades since its original release, the 1939 J-55 delivers an aura of sound with an incredible dynamic range, warm mids, and a tight punchy bass. It excels in the woody ambience good Gibson guitars are known for",
-    "features": [
-        "Thermally Aged Red Spruce Vintage Sunburst Top ",
-        "Traditional Advanced Hand-Scalloped Red Spruce Hide Glue Top Bracing ",
-        "Terraced Fire Stripe Pickguard ",
-        "Gibson Jumbo Archtop Hardshell Case "
-    ],
-    "stack": 2,
-    "category": "Instruments"
-}
+    "firstName": "art",
+    "lastName": "admin",
+    "email": "art@gmail.com",
+    "password": "$2b$10$LQls1/7C2pZTB8B/D8Ugm.VmmI0b3nnojzBLlauD5qci2r4r68Cdy",
+    "registered": "2020-05-05T10:06:07.554Z"
+  }
