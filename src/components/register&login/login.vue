@@ -20,10 +20,13 @@
                         </label>
                     </div>
 
-                    <button type="button" class="button"  :disabled='$v.$invalid' @click="login">CREATE ACCOUNT</button>
+                    <button type="button" class="button"  :disabled='$v.$invalid' @click="login">SIGN IN</button>
                 </div>
             </div>
         </form>
+        <div class="error" v-if="error">
+            <p class="form-input-hint">{{error}}</p>
+        </div>
         <div>
         <p>If you don't have an account, no problem. 
             <router-link :to="{name: 'register'}"> Create an account now.</router-link>
@@ -46,7 +49,7 @@ export default {
         return {
             email: '',
             password: '',
-            error: false,
+            error: '',
         }
     },
     methods: {
@@ -72,7 +75,7 @@ export default {
             })
             .catch((error) => {
                 
-                this.error = true
+                this.error = error.response.data.error
             })
         },
         setUser(user){
