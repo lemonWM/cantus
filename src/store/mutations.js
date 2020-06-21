@@ -13,5 +13,11 @@ export default{
     setProducts(state, payload){
 
         state.productsAll = payload.products
+    },
+
+    // when login ->
+    setUser(state, payload){
+
+        state.user = payload.user
     }
 }

@@ -6,7 +6,7 @@
 
 <script>
 
-import register from '../components/register/register.vue'
+import register from '../components/register&login/register.vue'
 
 export default {
     name: 'Register',

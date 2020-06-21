@@ -24,26 +24,23 @@
                         <input type="text" placeholder="EMAIL ADDRESS"  v-model.lazy="email" @input="$v.email.$touch()">
                              <p class="form-input-hint" v-if="!$v.email.email">Not correct email format</p>
                              <p class="form-input-hint" v-if="!$v.email.unique">This address is already in use</p>
-                        <!--e mail validators -  -->
                         </label>
                     </div>
                     <div class="medium-3 cell">
                         <label>
-                        <input type="password" placeholder="PASSWORD"  v-model.lazy="password" @input="$v.password.$touch()">
+                        <input type="password" placeholder="PASSWORD"  v-model.lazy="password" @blur="$v.password.$touch()">
                             <p class="form-input-hint" v-if="!$v.password.minLength">Required min. 5 signs</p>
                         </label>
                     </div>
                     <div class="medium-3 cell">
                         <label>
-                        <input type="password" placeholder="REPEAT PASSWORD" v-model="passwordConfirm" @input="$v.passwordConfirm.$touch()">
+                        <input type="password" placeholder="REPEAT PASSWORD" v-model="passwordConfirm" @blur="$v.passwordConfirm.$touch()">
                             <p class="form-input-hint" v-if="!$v.passwordConfirm.sameAs">Passwords are differents</p>
                         </label>
                     </div>
                     <button type="button" class="button"  :disabled='$v.$invalid' @click="register">CREATE ACCOUNT</button>
                 </div>
             </div>
-
-            <pre>{{$v.email}}</pre>
         </form>
     </div>
 </template>
