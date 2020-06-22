@@ -28,9 +28,9 @@
             <p class="form-input-hint">{{error}}</p>
         </div>
         <div>
-        <p>If you don't have an account, no problem. 
-            <router-link :to="{name: 'register'}"> Create an account now.</router-link>
-        </p>
+            <p>If you don't have an account, no problem. 
+                <router-link :to="{name: 'register'}"> Create an account now.</router-link>
+            </p>
         </div>
     </div>
 </template>
@@ -111,5 +111,9 @@ export default {
 
 .form{
     width: 100%;
+}
+
+::placeholder {
+  color: blue;
 }
 </style>
