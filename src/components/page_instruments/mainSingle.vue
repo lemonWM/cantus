@@ -8,10 +8,8 @@
                         <p>{{product.price}}</p>
                     </div>
                 </div>
-                
                 <p class="element">{{product.product}}</p>
                 <p class="element">{{product.producent}}</p>
-
             </div>
     </router-link>
 </template>

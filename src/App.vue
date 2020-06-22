@@ -17,9 +17,22 @@
       </div>
     </div>
 
-    <router-view/>
+    <router-view class="content-main"/>
+    
+    <footerMain />
   </div>
 </template>
+
+<script>
+
+import footerMain from './components/footer'
+
+export default {
+  components: {
+    footerMain
+  }
+}
+</script>
 
 <style scoped>
 .main{
@@ -40,4 +53,9 @@ a{
 font-weight: 500;
 font-size: 14px;
 }
+
+.content-main{
+  min-height: 85vh;
+}
+
 </style>

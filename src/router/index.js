@@ -77,5 +77,15 @@ export default new Router({
         }
       ]
     },
+    {
+      path: '/About',
+      name: 'About',
+      component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    },
+    {
+      path: '/Contact',
+      name: 'Contact',
+      component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue'),
+    },
     ]
 })
