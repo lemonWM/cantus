@@ -76,9 +76,9 @@ img{
     height: 100%;
     justify-content: center;
     align-items: center;
-    background: #ffffff6b;
+    background: #ffffffb3;
     color: black;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
 }
 
@@ -86,6 +86,7 @@ img{
     display: flex;
     flex-direction: column;
     margin: 10px;
+    align-items: center;
 }
 
 .product-hover{
