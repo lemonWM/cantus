@@ -32,7 +32,7 @@
                 <p>Total cost: $ <span>{{total}}</span></p>
             </div>
             <div class="button-wrapper">
-                <button type="button" class="hollow button" >KEEP SHOPING</button>
+                <button type="button" class="hollow button" @click="goShop">KEEP SHOPING</button>
                 <button type="button" class="success button" >PURCHASE</button>
             </div>
 
@@ -65,6 +65,13 @@ export default {
 
             return value
         }
-    }
+    },
+    methods: {
+        
+        goShop(){
+
+            this.$router.push({name: 'shop'})
+        }
+    },
 }
 </script>
