@@ -25,5 +25,7 @@ export default{
     setCart(state, payload){
 
         state.cart.push(payload)
+
+        console.log(state.cart)
     }
 }

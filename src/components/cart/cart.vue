@@ -25,12 +25,14 @@
                 </div>
             </div>
             <div class="underline"></div>
-            <div class="cart-buttons grid-container ">
+            <div class="cart-summary grid-container ">
                 <div class="summary">
                     <p>Total cost: $ <span>{{product.price*items}}</span></p>
                 </div>
-                <button type="button" class="alert button">CANCEL</button>
-                <button type="button" class="success button">PURCHASE</button>
+                <div class="button-wrapper">
+                    <button type="button" class="alert button" @click="goBack">CANCEL</button>
+                    <button type="button" class="success button" @click="order">PURCHASE</button>
+                </div>
             </div>
         </div>
     </div>
@@ -42,14 +44,25 @@ export default {
     props: ['product'],
     data() {
         return {
-            items: 1
+            items: 1,
         }
     },
-   watch: {
-       items(n){
+    methods: {
 
-           console.log(n)
-       }
-   },
+        goBack(){
+
+            this.$router.push({name: 'shop'})
+        },
+
+        order(){
+
+            this.$store.commit('setCart', {
+                product: this.product,
+                quantity: this.items
+            })
+
+            this.$router.push({name: 'Order'}) 
+        }
+    },
 }
 </script>
