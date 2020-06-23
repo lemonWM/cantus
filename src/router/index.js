@@ -87,5 +87,11 @@ export default new Router({
       name: 'Contact',
       component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue'),
     },
+    {
+      path: '/Cart',
+      name: 'Cart',
+      component: () => import(/* webpackChunkName: "about" */ '../components/cart/cart.vue'),
+      props: true,
+    }
     ]
 })

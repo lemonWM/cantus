@@ -5,7 +5,7 @@
                 <div class="main-content" @mouseover="changeOn" @mouseleave="changeOff" >
                     <img :src="picture" class="img-responsive">
                     <div class="product-hover" >
-                        <p>{{product.price}}</p>
+                        <p>{{product.price}} $</p>
                     </div>
                 </div>
                 <p class="element">{{product.product}}</p>

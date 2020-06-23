@@ -19,5 +19,11 @@ export default{
     setUser(state, payload){
 
         state.user = payload.user
+    },
+    // add to cart - buy ->
+
+    setCart(state, payload){
+
+        state.cart.push(payload)
     }
 }
