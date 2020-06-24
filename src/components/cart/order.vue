@@ -5,7 +5,6 @@
             <div class="underline"></div>
         </div>
         <div class="grid-container" v-for="item in getCart">
-  
             <div class="grid-container cart-main">
                 <div class="row">
                     <div class="columns medium-3">
@@ -35,7 +34,6 @@
                 <button type="button" class="hollow button" @click="goShop">KEEP SHOPING</button>
                 <button type="button" class="success button" >PURCHASE</button>
             </div>
-
         </div>
     </div>
 </template>
@@ -62,7 +60,6 @@ export default {
 
                 value += (this.getCart[i].product.price * this.getCart[i].quantity)
             }
-
             return value
         }
     },
