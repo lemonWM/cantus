@@ -56,19 +56,23 @@
         </div>
         <div class="cart-summary grid-container ">
             <div class="button-wrapper">
-                <button type="button" class="alert button">CANCEL</button>
-                <button type="button" class="success button">SEND</button>
+                <button type="button" class="alert button" @click="edit">CANCEL</button>
+                <button type="button" class="success button" @click="send">SEND</button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+import * as moment from 'moment';
+import 'moment/locale/pt-br';
+
 export default {
     name: 'order-summary',
     data() {
         return {
-            
+            data: ''
         }
     },
     computed: {
@@ -76,6 +80,39 @@ export default {
         order(){
 
             return this.$store.state.order
+        }
+    },
+    methods: {
+        
+        edit(){
+
+            this.$router.go(-1)
+        },
+        getDate(){
+
+            var moment = require('moment');
+
+            this.data = moment().format()
+        },
+        send(){
+
+            this.getDate()
+
+            this.axios.post('/new-order', {
+                user: this.order.userID,
+                userAddress: this.order.user,
+                order: this.order.productOrder,
+                deliveryTerms: this.order.deliveryTerms,
+                data: this.data
+            })
+            .then(({ data })=>{
+
+                console.log(data)
+            })
+            .catch(({ error })=> {
+
+                console.log(error)
+            })
         }
     },
 }
