@@ -5,7 +5,7 @@
                 <h2>ORDER CHECKOUT</h2>
                 <div class="underline"></div>
             </div>
-            <div class="grid-container" v-for="(item, index) in getCart" :key="item.product._id">
+            <div class="grid-container" v-for="(item, index) in getCart" :key="index">
                 <div class="grid-container cart-main">
                     <div class="row">
                         <div class="columns medium-3">
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div v-else>
-            <orderDelivery />
+            <orderDelivery @changeMode='changeMode'/>
         </div>
     </div>
 
@@ -87,6 +87,10 @@ export default {
             this.$store.commit('removeElementOrder', {
                 index: index
             })
+        },
+        changeMode(value){
+
+            this.editMode = value
         }
     },
     components: {

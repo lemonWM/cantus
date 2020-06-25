@@ -97,6 +97,11 @@ export default new Router({
       path: '/Order',
       name: 'Order',
       component: () => import(/* webpackChunkName: "about" */ '../components/cart/order.vue'),
+    },
+    {
+      path: '/Order/Summary',
+      name: 'Summary',
+      component: () => import(/* webpackChunkName: "about" */ '../components/cart/orderSummary.vue'),
     }
     ]
 })

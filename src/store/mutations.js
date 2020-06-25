@@ -31,5 +31,11 @@ export default{
     removeElementOrder(state, payload){
 
         state.cart.splice(payload.index, 1)
+    },
+
+    //order set user & product
+    setOrder(state, payload){
+
+        state.order = payload
     }
 }

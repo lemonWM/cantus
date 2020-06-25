@@ -14,7 +14,13 @@ export default new Vuex.Store({
         productsSelected: [],
         productsAll: [],
         user: {},
-        cart: []
+        cart: [],
+        order: {
+            user: {},
+            userID:'',
+            productOrder: {},
+            deliveryTerms: ''
+        }
     },
     getters,
     mutations,
