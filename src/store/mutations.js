@@ -20,10 +20,16 @@ export default{
 
         state.user = payload.user
     },
+    
     // add to cart - buy ->
-
     setCart(state, payload){
 
         state.cart.push(payload)
+    },
+
+    //remove from order single element
+    removeElementOrder(state, payload){
+
+        state.cart.splice(payload.index, 1)
     }
 }
