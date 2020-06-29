@@ -29,10 +29,12 @@
                         <input type="text" placeholder="STATE" v-model.lazy="userOrder.state" @input="$v.userOrder.state.$touch()">
                     </div>
                     <div class="medium-6 cell">
-                        <input type="text" placeholder="DELIVERY PHONE" v-model="userOrder.phone">
+                        <input type="text" placeholder="DELIVERY PHONE" v-model.lazy="userOrder.phone"  @input="$v.userOrder.phone.$touch()">
+                        <p class="form-input-hint" v-if="!$v.userOrder.phone.numeric">Type correct phone number</p>
                     </div>
                     <div class="medium-6 cell">
-                        <input type="text" placeholder="EMAIL ADDRESS" v-model="userOrder.email">
+                        <input type="text" placeholder="EMAIL ADDRESS" v-model="userOrder.email" @input="$v.userOrder.email.$touch()">
+                        <p class="form-input-hint" v-if="!$v.userOrder.email.email">Not correct email format</p>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,6 @@
             <button type="button" class="hollow button" @click="back">BACK TO ORDER</button>
             <button type="button" class="success button" :disabled='$v.$invalid' @click="confirm">CONFIRM</button>
         </div>
-        <pre>{{$v.userOrder.city}}</pre>
     </div>
 </template>
 
@@ -151,7 +152,18 @@ export default {
             },
             state: {
                 required
+            },
+            phone: {
+                required,
+                numeric
+            },
+            email: {
+                required,
+                email
             }
+        },
+        shippingSpeed: {
+            required
         }
     }
 }
