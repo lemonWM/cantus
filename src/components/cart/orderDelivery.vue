@@ -7,16 +7,20 @@
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
                     <div class="medium-6 cell">
-                        <input type="text" placeholder="FIRST NAME" v-model="userOrder.firstName">
+                        <input type="text" placeholder="FIRST NAME" v-model.lazy="userOrder.firstName" @input="$v.userOrder.firstName.$touch()">
+                        <p class="form-input-hint" v-if="!$v.userOrder.firstName.minLength">min 2 signs</p>
                     </div>
                     <div class="medium-6 cell">
-                        <input type="text" placeholder="LAST NAME" v-model="userOrder.lastName">
+                        <input type="text" placeholder="LAST NAME" v-model.lazy="userOrder.lastName" @input="$v.userOrder.lastName.$touch()">
+                         <p class="form-input-hint" v-if="!$v.userOrder.lastName.minLength">min 2 signs</p>
                     </div>
                      <div class="medium-12 cell">
-                        <input type="text" placeholder="STREET ADDRESS" v-model="userOrder.street">
+                        <input type="text" placeholder="STREET ADDRESS" v-model.lazy="userOrder.street" @input="$v.userOrder.street.$touch()">
+                        <p class="form-input-hint" v-if="!$v.userOrder.street.minLength">min 2 signs</p>
                     </div>
                     <div class="medium-4 cell">
-                        <input type="text" placeholder="ZIP" v-model="userOrder.zip">
+                        <input type="text" placeholder="ZIP" v-model.lazy="userOrder.zip" @input="$v.userOrder.zip.$touch()">
+                        <p class="form-input-hint" v-if="!$v.userOrder.zip.zipFormat">Not correct format ex: 00-000</p>
                     </div>
                     <div class="medium-4 cell">
                         <input type="text" placeholder="CITY" v-model="userOrder.city">
@@ -58,12 +62,18 @@
             <button type="button" class="hollow button" @click="back">BACK TO ORDER</button>
             <button type="button" class="success button" @click="confirm">CONFIRM</button>
         </div>
+        <pre>{{$v.userOrder.firstName}}</pre>
     </div>
 </template>
 
 <script>
+
+import {validationMixin} from 'vuelidate';
+import {required, minLength, email, numeric} from 'vuelidate/lib/validators';
+
 export default {
     name: 'order-delivery',
+    mixins: [validationMixin],
     data() {
         return {
             shippingSpeed: '',
@@ -106,6 +116,36 @@ export default {
             })
 
             this.$router.push({name: 'Summary'})
+        }
+    },
+    validations: {
+        userOrder: {
+            firstName: {
+                minLength: minLength(2),
+                required
+            },
+            lastName: {
+                minLength: minLength(2),
+                required
+            },
+            street: {
+                minLength: minLength(2),
+                required
+            },
+            zip: {
+                required,
+                zipFormat(value){
+
+                    let reg = /\d{2}\-\d{3}/ig
+
+                    if(reg.test(value) || value.length === 0){
+                        
+                        return true
+                    } 
+
+                    return false
+                }
+            }
         }
     }
 }

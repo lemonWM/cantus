@@ -36,7 +36,7 @@
                 </div>
                 <div class="button-wrapper">
                     <button type="button" class="hollow button" @click="goShop">KEEP SHOPING</button>
-                    <button type="button" class="success button" @click="editMode =! editMode">PURCHASE</button>
+                    <button type="button" class="success button" @click="editMode =! editMode" :disabled='!getCart.length'>PURCHASE</button>
                 </div>
             </div>
         </div>
