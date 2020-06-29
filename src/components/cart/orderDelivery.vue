@@ -23,10 +23,10 @@
                         <p class="form-input-hint" v-if="!$v.userOrder.zip.zipFormat">Not correct format ex: 00-000</p>
                     </div>
                     <div class="medium-4 cell">
-                        <input type="text" placeholder="CITY" v-model="userOrder.city">
+                        <input type="text" placeholder="CITY" v-model.lazy="userOrder.city" @change="$v.userOrder.city.$touch()">
                     </div>
                     <div class="medium-4 cell">
-                        <input type="text" placeholder="STATE" v-model="userOrder.state">
+                        <input type="text" placeholder="STATE" v-model.lazy="userOrder.state" @input="$v.userOrder.state.$touch()">
                     </div>
                     <div class="medium-6 cell">
                         <input type="text" placeholder="DELIVERY PHONE" v-model="userOrder.phone">
@@ -60,9 +60,9 @@
         </div>
         <div>
             <button type="button" class="hollow button" @click="back">BACK TO ORDER</button>
-            <button type="button" class="success button" @click="confirm">CONFIRM</button>
+            <button type="button" class="success button" :disabled='$v.$invalid' @click="confirm">CONFIRM</button>
         </div>
-        <pre>{{$v.userOrder.firstName}}</pre>
+        <pre>{{$v.userOrder.city}}</pre>
     </div>
 </template>
 
@@ -145,6 +145,12 @@ export default {
 
                     return false
                 }
+            },
+            city: {
+                required
+            },
+            state: {
+                required
             }
         }
     }
