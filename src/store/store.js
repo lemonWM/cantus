@@ -14,6 +14,7 @@ export default new Vuex.Store({
         productsSelected: [],
         productsAll: [],
         user: {},
+        userDetails: {},
         cart: [],
         order: {
             user: {},

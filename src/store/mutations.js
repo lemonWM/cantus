@@ -20,6 +20,12 @@ export default{
 
         state.user = payload.user
     },
+
+    setUserDetails(state, payload){
+
+
+        state.userDetails = payload.userDetails
+    },
     
     // add to cart - buy ->
     setCart(state, payload){
