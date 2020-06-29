@@ -93,7 +93,8 @@ export default {
     data() {
         return {
             data: '',
-            confirm: false
+            confirm: false,
+            error: ''
         }
     },
     computed: {
@@ -132,14 +133,15 @@ export default {
             })
             .catch(({ error })=> {
 
-                console.log(error)
+                this.error = error
             })
         },
         updateUser(data){
 
             this.axios.put('/user-update', {
                 userID: this.order.userID,
-                orderID: data
+                orderID: data,
+                order: this.order
             })
             .then(({ data })=>{
                 
@@ -147,7 +149,7 @@ export default {
             })
             .catch(({ error }) =>{
 
-                console.log(error)
+                this.error = error
             })
         }
     },

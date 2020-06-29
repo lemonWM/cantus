@@ -102,6 +102,13 @@ export default new Router({
       path: '/Order/Summary',
       name: 'Summary',
       component: () => import(/* webpackChunkName: "about" */ '../components/cart/orderSummary.vue'),
+    },
+
+    {
+      path: '/User/:id',
+      name: 'user',
+      component: () => import(/* webpackChunkName: "about" */ '../components/user/user.vue'),
+      props: true
     }
     ]
 })
