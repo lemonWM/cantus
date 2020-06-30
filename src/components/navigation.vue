@@ -46,13 +46,12 @@ export default {
           if(window.location.pathname === '/'){
 
             logout()
-            window.location.reload()
+            
 
           } else if(window.location.pathname !== '/'){
-            
-            logout()
+
             this.$router.push({name: 'home'})
-            window.location.reload()
+            logout()
           }
         }
     }

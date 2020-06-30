@@ -15,4 +15,5 @@ export function isLogged(){
 export function logout(){
 
     window.localStorage.removeItem('token')
+    window.location.reload()
 }
