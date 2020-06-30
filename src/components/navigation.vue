@@ -14,14 +14,17 @@
         <router-link :to="{name: 'login'}">LOGIN</router-link>
         <router-link :to="{name: 'register'}">REGISTER</router-link>
       </div>
-      <div v-else>
+      <div v-else class="user-nav menu align-right" >
          <router-link :to="{name: 'user' , params: {id: getUser ,user: isLogged}}">{{getUser}}</router-link>
-         <button type="button" class="btn " @click="logout">Logout</button>
+         <button type="button" class="btn " @click="logOut">Logout</button>
       </div>
     </div>
 </template>
 
 <script>
+
+import {logout} from '../utils/token'
+
 export default {
     name: 'navigation',
     computed: {
@@ -38,14 +41,23 @@ export default {
     },
     methods: {
 
-        logout(){
-            console.log(this.isLogged)
+        logOut(){
+
+          if(window.location.pathname === '/'){
+
+            logout()
+            window.location.reload()
+
+          } else if(window.location.pathname !== '/'){
+            
+            logout()
+            this.$router.push({name: 'home'})
+            window.location.reload()
+          }
         }
     }
 }
 </script>
-
-
 
 <style scoped>
 .main{
@@ -69,6 +81,9 @@ font-size: 14px;
 
 .content-main{
   min-height: 85vh;
+}
+.btn{
+  cursor: pointer;
 }
 
 </style>

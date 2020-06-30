@@ -11,3 +11,8 @@ export function isLogged(){
 
     return token && decode(token).exp > (Date.now() / 1000)
 }
+
+export function logout(){
+
+    window.localStorage.removeItem('token')
+}
