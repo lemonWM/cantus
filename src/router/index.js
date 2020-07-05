@@ -108,6 +108,20 @@ export default new Router({
       path: '/User/:id',
       name: 'user',
       component: () => import(/* webpackChunkName: "about" */ '../components/user/user.vue'),
+      children: [
+        {
+          path:'Order/History',
+          name: 'orderHistory',
+          props: true,
+          component: () => import(/* webpackChunkName: "about" */ '../components/user/orderHistory.vue'),
+        },
+        {
+          path:'Profile',
+          name: 'profile',
+          props: true,
+          component: () => import(/* webpackChunkName: "about" */ '../components/user/profile'),
+        }
+      ],
       props: true
     },
     {

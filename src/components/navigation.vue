@@ -14,12 +14,14 @@
         <router-link :to="{name: 'login'}">LOGIN</router-link>
         <router-link :to="{name: 'register'}">REGISTER</router-link>
       </div>
-      <div v-else class="user-nav menu align-right" >
+      <div v-else id="nav" class="user-nav menu align-right" >
          <router-link :to="{name: 'user' , params: {id: getUser ,user: isLogged}}">{{getUser}}</router-link>
          <router-link :to="{name: 'Usercart'}">
             <i class="fas fa-shopping-cart">{{cartItems}}</i>
          </router-link>
-         <router-link to="" @click.native="logOut">Logout</router-link>
+         <router-link to="" @click.native="logOut">
+            <i class="fas fa-sign-out-alt"></i>
+         </router-link>
       </div>
     </div>
 </template>
