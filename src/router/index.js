@@ -109,6 +109,11 @@ export default new Router({
       name: 'user',
       component: () => import(/* webpackChunkName: "about" */ '../components/user/user.vue'),
       props: true
+    },
+    {
+      path: '/user/cart',
+      name: 'Usercart',
+      component: () => import(/* webpackChunkName: "about" */ '../components/cart/userCart.vue'),
     }
     ]
 })

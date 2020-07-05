@@ -16,6 +16,9 @@
       </div>
       <div v-else class="user-nav menu align-right" >
          <router-link :to="{name: 'user' , params: {id: getUser ,user: isLogged}}">{{getUser}}</router-link>
+         <router-link :to="{name: 'Usercart'}">
+            <i class="fas fa-shopping-cart">{{cartItems}}</i>
+         </router-link>
          <button type="button" class="btn " @click="logOut">Logout</button>
       </div>
     </div>
@@ -38,6 +41,13 @@ export default {
 
             return this.$store.state.user
         },
+        cartItems(){
+
+          if(this.$store.state.cart.length){
+
+            return this.$store.state.cart.length
+          }
+        }
     },
     methods: {
 
@@ -58,7 +68,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped> 
 .main{
   justify-content: space-between;
   background-color: #ff0000;

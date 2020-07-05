@@ -130,6 +130,8 @@ export default {
             .then(({ data })=>{
 
                 this.updateUser(data)
+
+                // clear cart commit
             })
             .catch(({ error })=> {
 
