@@ -131,7 +131,7 @@ export default {
 
                 this.updateUser(data)
 
-                // clear cart commit
+                this.resetCart()
             })
             .catch(({ error })=> {
 
@@ -153,6 +153,10 @@ export default {
 
                 this.error = error
             })
+        },
+        resetCart(){
+
+            this.$store.commit('resetCart')
         }
     },
 }

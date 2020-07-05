@@ -33,6 +33,12 @@ export default{
         state.cart.push(payload)
     },
 
+    // reset cart after send order
+    resetCart(state){
+
+        state.cart = []
+    },
+
     //remove from order single element
     removeElementOrder(state, payload){
 

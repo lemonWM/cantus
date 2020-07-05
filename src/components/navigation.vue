@@ -19,7 +19,7 @@
          <router-link :to="{name: 'Usercart'}">
             <i class="fas fa-shopping-cart">{{cartItems}}</i>
          </router-link>
-         <button type="button" class="btn " @click="logOut">Logout</button>
+         <router-link to="" @click.native="logOut">Logout</router-link>
       </div>
     </div>
 </template>
