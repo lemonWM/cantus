@@ -15,7 +15,9 @@
         <router-link :to="{name: 'register'}">REGISTER</router-link>
       </div>
       <div v-else id="nav" class="user-nav menu align-right" >
-         <router-link :to="{name: 'user' , params: {id: getUser ,user: isLogged}}">{{getUser}}</router-link>
+         <router-link :to="{name: 'user' , params: {id: getUser ,user: isLogged}}">
+         <i class="far fa-user"></i>
+         {{getUser}}</router-link>
          <router-link :to="{name: 'Usercart'}">
             <i class="fas fa-shopping-cart">{{cartItems}}</i>
          </router-link>
