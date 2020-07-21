@@ -1,0 +1,117 @@
+p, span, a{
+    font-family: 'Montserrat', sans-serif;
+}
+a:focus { 
+    outline: none; 
+}
+// img main
+
+.header{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        min-height: 180px;
+    }
+    .title-header{
+        position: absolute;
+        color: white;
+        z-index: 3;
+        margin: 0px 20%;
+
+        .title-logo{
+            margin-right: 10px;
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+
+            span{
+                font-size: 24px;
+            }
+        }
+    }
+    .shadow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: #000000ad;
+    }
+}
+
+// categories home
+.categories-wrapper{
+    align-items: center;
+    margin: 100px 15%;
+
+    .categories-header{
+        font-family: 'Great Vibes', cursive;
+        font-size: 46px;
+        font-weight: 500;
+    }
+}
+.single-category{
+    margin: 10px;
+    transition: all ease-in .2s;
+    -webkit-transition: all ease-in .2s;
+    -moz-transition: all ease-in .2s;
+    -ms-transition: all ease-in .2s;
+    -o-transition: all ease-in .2s;
+
+    .single-container{
+        display: flex;
+        position: relative;
+        transition: all ease-in .1s;
+        
+        figure img{
+            width: 300px;
+            height: 200px;
+        } 
+        .background{
+            position: absolute;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: #000000a3;
+            color: white;
+            font-size: 28px;
+        }
+    }
+    .single-container:focus, .single-container:hover >.background{
+        display: flex;
+    }
+}
+.single-category:hover{
+    -webkit-box-shadow: 0px 0px 28px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 28px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px 4px rgba(0,0,0,0.75);
+}
+
+
+// shop page
+
+.sort-wrapper{
+    align-items: center;
+    justify-content: center;
+    margin: 40px 10px;
+
+    .sort-element{
+
+        label{
+            font-size: 18px;
+        }
+
+        input, select{
+            border: none;
+            box-shadow: none;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+//login page 
+
+

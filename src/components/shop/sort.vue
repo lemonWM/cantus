@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="sort-element">
         <label for="sort">Sort by</label>
         <select name="" id="sort" v-model="sortBy" @change="update">
             <option value="">All products</option>

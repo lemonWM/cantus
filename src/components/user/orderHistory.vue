@@ -24,6 +24,5 @@
 export default {
     name: 'order-history',
     props: ['order'],
-
 }
 </script>

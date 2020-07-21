@@ -1,6 +1,6 @@
 <template>
     <div class="flex-container flex-dir-column">
-        <div class="grid-x ">
+        <div class="grid-x sort-wrapper">
             <search class="columns small-6"/>
             <sort class="columns small-6"  @select='selected'/>        
         </div>

@@ -20,14 +20,8 @@
 
 <script>
 
-
 export default {
     name: 'home-categories',
-    data() {
-        return {
-            
-        }
-    },
     computed: {
         categories(){
 
@@ -56,37 +50,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-h3{
-    font-family: 'Great Vibes', cursive;
-    font-size: 46px;
-    font-weight: 500;
-}
-.categories-wrapper{
-    margin: 100px 15%;
-}
-
-.single-category{
-    margin: 10px;
-}
-.single-container{
-    display: flex;
-    position: relative;
-    transition: all ease-in .1s;
-}
-.background{
-    position: absolute;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #000000a3;
-    color: white;
-    font-size: 28px;
-}
-.single-container:focus, .single-container:hover >.background{
-    display: flex;
-}
-</style>

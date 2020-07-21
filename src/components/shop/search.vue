@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="sort-element">
         <label for="search" class="search-element">
             Search product
-            <input id="search" type="text" v-model="value">
         </label>
+        <input id="search" type="text" v-model="value" placeholder="ex. Gibson, Fender">
     </div>
 </template>
 
