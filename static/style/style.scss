@@ -1,4 +1,4 @@
-p, span, a{
+p, span, a, h1, h2, h3{
     font-family: 'Montserrat', sans-serif;
 }
 a:focus { 
@@ -18,10 +18,8 @@ a:focus {
         position: absolute;
         color: white;
         z-index: 3;
-        margin: 0px 20%;
 
         .title-logo{
-            margin-right: 10px;
             text-align: center;
             font-family: 'Great Vibes', cursive;
 
@@ -112,6 +110,50 @@ a:focus {
 }
 
 
-//login page 
+//login & register page 
 
+.acount-wrapper{
+    align-items: center;
 
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0px;
+    }
+    .form{
+        width: 100%;
+    
+        div .form-wrapper{
+            flex-direction: column;
+            align-items: center;
+
+            div label{
+                position: relative;
+                
+                i{
+                    position: absolute;
+                    top: 12px;
+                    left: 10px;  
+                    color: #a6a4a4;
+                }
+                input{
+                    padding-left: 35px;
+                    border: none;
+                    box-shadow: none;
+                    margin-bottom: 30px;
+                }
+                input:focus{
+                    border-bottom: 1px solid #a6a4a4;
+                }
+            }
+            .button{
+                width: 180px;
+                border-radius: 30px;
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
