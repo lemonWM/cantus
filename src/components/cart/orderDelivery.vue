@@ -1,6 +1,6 @@
 <template>
-    <div>  
-        <div>
+    <div class="delivery-wrapper">  
+        <div class="title">
             <h2>Where would you like this order delivered?</h2>
         </div> 
         <form>
@@ -39,9 +39,9 @@
                 </div>
             </div>
         </form>
-        <div>
+        <div class="shipping">
             <div>
-                <h3>Select a shipping speed</h3>
+                <h3>Select a shipping method</h3>
             </div>
             <div>
                 <form>
@@ -60,7 +60,7 @@
                 </form>
             </div>
         </div>
-        <div>
+        <div class="button-wrapper">
             <button type="button" class="hollow button" @click="back">BACK TO ORDER</button>
             <button type="button" class="success button" :disabled='$v.$invalid' @click="confirm">CONFIRM</button>
         </div>

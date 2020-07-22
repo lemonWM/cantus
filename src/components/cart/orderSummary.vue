@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="order-summary">
         <div v-if="!confirm">
             <div class="grid-container">
                 <div class="grid-container cart-header">

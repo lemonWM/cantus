@@ -216,19 +216,148 @@ button:focus {outline:0;}
 
 // buying steps 
 
+.underline{
+    border-bottom: 1px solid #cacaca;
+}
+
 .cart-first{
 
-    .product-name{
+    h2{
+        margin: 30px 0px;
+        font-size: 35px;
+    }
+
+    .product-name, .product-quantity, .product-price{
         margin-top: 50px;
+        
         .name{
             font-size: 22px;
             font-weight: 500;
         }
-        .producent{
 
+        #quantity{
+            box-shadow: none;
+            border-radius: 10px;
+        }
+    }
+
+    .cart-main{
+        margin-bottom: 25px;
+
+        .main-wrapper{
+            margin: 35px 0px;
+        }
+    }
+
+    .cart-summary{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 25px;
+
+        .summary{
+
+            p{
+                font-size: 20px;
+                font-weight: 500;
+
+            }
+        }
+        .button-wrapper{
+            margin-top: 20px;
+            margin-bottom: 100px;
+
+            button{
+                width: 140px;
+                border-radius: 25px;
+                margin: 0px 25px;
+                font-weight: 500;
+            }
         }
     }
 }
-.underline{
-    border-bottom: 1px solid #cacaca;
+
+// order checkout
+
+.order-wrapper{
+
+    h2{
+        margin: 30px 0px;
+        font-size: 35px;
+    }
+    .single-order-element{
+        margin: 25px 0px;
+
+        .medium-4, .medium-3, .medium-1{
+            margin-top: 25px;
+
+            button{
+                border: 1px solid #a2a2a2;
+                border-radius: 24px;
+                color: #a2a2a2;
+            }
+        }
+    }
+    .cart-summary{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 25px;
+
+        .summary{
+
+            p{
+                font-size: 20px;
+                font-weight: 500;
+
+            }
+        }
+        .button-wrapper{
+            margin-top: 20px;
+            margin-bottom: 100px;
+
+            button{
+                width: 140px;
+                border-radius: 25px;
+                margin: 0px 25px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// delivery page
+
+.delivery-wrapper{
+
+    .title h2{
+        margin: 30px 0px;
+        font-size: 35px;     
+    }
+
+    form{
+        input{
+            box-shadow: none;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+        }
+    }
+    .shipping{
+        display: flex;
+        flex-direction: column;
+        margin: 30px .9375rem; 
+    }
+    .button-wrapper{
+        margin-top: 20px;
+        margin-bottom: 100px;
+
+        button{
+            width: 160px;
+            border-radius: 25px;
+            margin: 0px 25px;
+            font-weight: 500;
+        }
+    }
 }

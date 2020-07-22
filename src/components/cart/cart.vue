@@ -5,7 +5,7 @@
             <div class="underline"></div>
         </div>
         <div class="grid-container cart-main">
-            <div class="row">
+            <div class="row main-wrapper">
                 <div class="columns medium-3">
                     <img :src="product.photos[0]" alt="">
                 </div>
@@ -13,14 +13,14 @@
                     <p class="name">{{product.product}}</p>
                     <p class="producent">{{product.producent}}</p>
                 </div>
-                <div class="columns medium-3">
+                <div class="columns medium-3 product-quantity">
                     <label for="quantity">
                         Quantity
                         <input type="number" id="quantity" min="1" :max="product.stock" placeholder="1" v-model="items">
                     </label>
                     <p>Stock: {{product.stock}}</p>
                 </div>
-                <div class="columns medium-2">
+                <div class="columns medium-2 product-price">
                     <p>$ <span>{{product.price}}</span></p>
                 </div>
             </div>
