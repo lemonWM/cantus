@@ -2,35 +2,34 @@
     <div class="order-summary">
         <div v-if="!confirm">
             <div class="grid-container">
-                <div class="grid-container cart-header">
+                <div class="grid-container cart-header title">
                     <h2>YOUR ORDER SUMMARY</h2>
                     <div class="underline"></div>
                 </div>
                 <div class="grid-container cart-main" v-for="(order, index) in order.productOrder">
-                    <div class="row">
+                    <div class="row single-order-element">
                         <div class="columns medium-3">
                             <img :src="order.product.photos[0]" alt="">
                         </div>
-                        <div class="columns medium-3">
+                        <div class="columns medium-3 offset">
                         <h3>{{order.product.producent}}</h3>
                         <h4>{{order.product.product}}</h4>
                         </div>
-                        <div class="columns medium-3">
+                        <div class="columns medium-3 offset">
                             <p>x{{order.quantity}}</p>
                         </div>
-                        <div class="columns medium-3">
+                        <div class="columns medium-3 offset">
                             <p>$ {{order.product.price * order.quantity}}</p>
                         </div>
                     </div>
                     <div class="underline"></div>
                 </div>
             </div>
-            <div class="grid-container">
-                <div class="grid-container cart-header">
-                    <h3>Shipping address</h3>
-                    <div class="underline"></div>
+            <div class="grid-container shipping">
+                <div class="grid-container cart-header shipping-title">
+                    <h3>Shipping address:</h3>
                 </div>
-                <div class="grid-container cart-main">
+                <div class="grid-container cart-main shippind-main">
                     <div class="row">
                         <div class="columns medium-3">
                             <p>{{order.user.firstName + ' ' + order.user.lastName}}</p>
@@ -43,9 +42,9 @@
                 </div>
             </div>
             <div class="grid-container">
-                <div class="grid-container cart-header">
-                    <h3>Shipping method</h3>
+                <div class="grid-container cart-header delivery-main">
                     <div class="underline"></div>
+                    <h3>Shipping method</h3>
                 </div>
                 <div class="grid-container cart-main">
                     <div class="row">
@@ -64,7 +63,7 @@
         </div>
         <div v-else>
             <div class="grid-container">
-                <div class="row">
+                <div class="row summary-alert">
                     <div class="columns medium-12">
                         <h3>Congratulations!</h3>
                     </div>
@@ -75,7 +74,10 @@
                         <h5>Thank you for your purchase</h5>
                     </div>
                     <div class="columns medium-12">
-                        <a href="">Visit your profile and look up for update status</a>
+                        <button type="button" class="hollow button" @click="goToProfile">Visit profile and look up for updates</button>
+                    </div>
+                    <div class="columns medium-12">
+                        <button :disabled='true'>Download invoice in pdf - availiable soon</button>
                     </div>
                 </div>
             </div>
@@ -157,6 +159,10 @@ export default {
         resetCart(){
 
             this.$store.commit('resetCart')
+        },
+        goToProfile(){
+
+            this.$router.push({name: 'profile'})
         }
     },
 }
