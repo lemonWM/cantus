@@ -1,6 +1,6 @@
 # cantus
 
-> A Vue.js project
+> A Vue.js shop
 
 ## Build Setup
 
