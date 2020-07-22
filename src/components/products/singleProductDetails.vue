@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-container flex-dir-column align-self-top">
+    <div class="flex-container flex-dir-column align-self-top features-view">
         <p class="cell small-4">{{details}}</p>
     </div>
 </template>

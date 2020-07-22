@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-container">
+    <div class="grid-container cart-first">
         <div class="grid-container cart-header">
             <h2>YOUR CART</h2>
             <div class="underline"></div>
@@ -9,9 +9,9 @@
                 <div class="columns medium-3">
                     <img :src="product.photos[0]" alt="">
                 </div>
-                <div class="columns medium-4">
-                    <p>{{product.product}}</p>
-                    <p>{{product.producent}}</p>
+                <div class="columns medium-4 product-name">
+                    <p class="name">{{product.product}}</p>
+                    <p class="producent">{{product.producent}}</p>
                 </div>
                 <div class="columns medium-3">
                     <label for="quantity">

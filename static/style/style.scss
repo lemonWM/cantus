@@ -187,30 +187,48 @@ button:focus {outline:0;}
             flex-direction: row;
             width: 100%;
             justify-content: center;
+            margin: 50px 0px 50px 0px;
             
-            div{
-                width: 50%;
-                border-bottom: 1px solid dimgray;
-            }
-            a{
-                //display: flex;
-                
-                padding: 10px;
-            }
-            .details-btn{
-               
-                height: 30px;
-            }
-            .features-btn{
-              
-                height: 30px;
-            }
-            .router-link-exact-active{
-       
-                border: 1px solid dimgray;
-                border-bottom: 1px solid white;
+            div a{
+
+                color: dimgray;
+                font-weight: 500;
+                font-size: 24px;
+                margin: 0px 30px;
             }
         }
+        .detail-view{
+            width: 100%;
+            margin-top: 0px;
 
+            .details-list{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+        .features-view{
+            margin: 0px 10%;
+        }
     }
+}
+
+
+// buying steps 
+
+.cart-first{
+
+    .product-name{
+        margin-top: 50px;
+        .name{
+            font-size: 22px;
+            font-weight: 500;
+        }
+        .producent{
+
+        }
+    }
+}
+.underline{
+    border-bottom: 1px solid #cacaca;
 }
