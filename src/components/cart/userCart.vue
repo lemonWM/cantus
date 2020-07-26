@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div class="user-cart">
         <div class="grid-container" v-if="editMode">
             <div v-if="hasItem">
-                <div class="grid-container cart-header">
+                <div class="grid-container cart-header title">
                     <h2>YOUR CART</h2>
                     <div class="underline"></div>
                 </div>
                 <div class="grid-container cart-main" v-for="(item, index) in cart">
-                    <div class="row">
+                    <div class="row single-order-element">
                         <div class="columns medium-3">
                             <img :src="item.product.photos[0]" alt="">
                         </div>

@@ -406,4 +406,39 @@ button:focus {outline:0;}
             border-radius: 25px;
         }
     }
-}   
+} 
+
+// cart
+
+.user-cart{
+
+    .title h2{
+        margin: 30px 0px;
+        font-size: 35px;     
+    }
+
+    .single-order-element{
+        margin: 25px 0px;
+
+        .medium-4, .medium-2, .medium-1{
+            margin-top: 25px;
+
+            button{
+                border: 1px solid #a2a2a2;
+                border-radius: 24px;
+                color: #a2a2a2;
+            }
+        }
+    }
+    .button-wrapper{
+        margin-top: 20px;
+        margin-bottom: 100px;
+
+        button{
+            width: 160px;
+            border-radius: 25px;
+            margin: 0px 25px;
+            font-weight: 500;
+        }
+    }
+}
