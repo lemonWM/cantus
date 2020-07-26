@@ -24,6 +24,9 @@
                     </div>
                     <div class="underline"></div>
                 </div>
+                <div class="total-price">
+                    <p>Summary $ <span>{{total}}</span></p>
+                </div>
                 <div class="cart-summary grid-container ">
                     <div class="button-wrapper">
                         <button type="button" class="hollow button" @click="goShop">KEEP SHOPING</button>
@@ -31,9 +34,9 @@
                     </div>
                 </div>        
             </div>
-            <div v-else>
-                <div class="grid-container cart-header">
-                    <h2>No product in cart</h2>
+            <div v-else class="empty-cart">
+                <div class="grid-container cart-header title">
+                    <h2>No selected product in cart</h2>
                     <div class="underline"></div>
                 </div>
             </div>
@@ -54,7 +57,8 @@ export default {
     data() {
         return {
             editMode: true,
-            hasItem: true
+            hasItem: true,
+            total: 0
         }
     },
     computed: {
@@ -62,6 +66,15 @@ export default {
         cart(){
 
             if(this.$store.state.cart.length){
+
+                this.total = 0
+
+                let value = this.$store.state.cart
+
+                for(let i =0; i<value.length; i++){
+
+                    this.total += value[i].product.price
+                }
 
                 return this.$store.state.cart
             } else {

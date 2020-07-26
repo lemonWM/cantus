@@ -1,7 +1,7 @@
 <template>
     <div class="single-product"> 
-        <div class="flex-container flex-dir-column wrapper">
-            <div class="grid-x grid-padding-x">
+        <div class="flex-container flex-dir-column wrapper product-wrapper-main">
+            <div class="grid-x grid-padding-x single">
                 <div class="cell small-7">
                     <imageSlider  :images='this.productSingle.photos'/>
                 </div>

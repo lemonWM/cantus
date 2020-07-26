@@ -1,6 +1,6 @@
 <template>
-    <div class="menu main">
-        <div id="nav" class="main-nav menu">
+    <div class="menu main navigation-wrapper">
+      <div id="nav" class="main-nav menu">
         <router-link :to="{name: 'home'}">HOME</router-link>
         <router-link :to="{name: 'shop'}">SHOP</router-link>
         <router-link :to="{name: 'Albums'}">ALBUMS</router-link>
@@ -16,7 +16,7 @@
       </div>
       <div v-else id="nav" class="user-nav menu align-right" >
          <router-link :to="{name: 'user' , params: {id: getUser ,user: isLogged}}">
-         <i class="far fa-user"></i>
+            <i class="far fa-user"></i>
          {{getUser}}</router-link>
          <router-link :to="{name: 'Usercart'}">
             <i class="fas fa-shopping-cart">{{cartItems}}</i>
@@ -40,7 +40,6 @@ export default {
 
             return this.$store.state.user.firstName
         },
-        
         isLogged(){
 
             return this.$store.state.user
@@ -71,32 +70,3 @@ export default {
     }
 }
 </script>
-
-<style scoped> 
-.main{
-  justify-content: space-between;
-  background-color: #ff0000;
-}
-.menu-logo{
-  height: 40px;
-}
-.logo-home{
-  margin-left: -140px;
-}
-#nav{
-  align-items: center;
-}
-a{
-  color: white;
-font-weight: 500;
-font-size: 14px;
-}
-
-.content-main{
-  min-height: 85vh;
-}
-.btn{
-  cursor: pointer;
-}
-
-</style>

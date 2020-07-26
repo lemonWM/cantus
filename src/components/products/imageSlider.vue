@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-x grid-padding-x">
+    <div class="grid-x grid-padding-x image-slider">
         <div class="cell small-2">
             <figure v-for="(img, index) in images" :key="img">
                 <img :src="img" alt="" @click="selectImg(index)">
