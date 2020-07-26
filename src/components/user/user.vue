@@ -1,9 +1,10 @@
 <template>
-     <div class="grid-container">
-        <h2>YOUR ACCOUNT</h2>
-        <div class="underline"></div>
-
-        <div class="row">
+     <div class="grid-container user-panel">
+        <div class="title">
+            <h2>YOUR ACCOUNT</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="row link-wrapper">
             <router-link :to="{name: 'profile', params:{user: userDetails}}">Profile</router-link>
             <router-link :to="{name: 'orderHistory', params:{order: userDetails.orders}}">Order history</router-link>
         </div>

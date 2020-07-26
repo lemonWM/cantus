@@ -101,7 +101,6 @@ button:focus {outline:0;}
         label{
             font-size: 18px;
         }
-
         input, select{
             border: none;
             box-shadow: none;
@@ -176,7 +175,6 @@ button:focus {outline:0;}
         font-weight: 600;
         color: white !important;
     }
-
     .features{
         width: 100%;
         display: flex;
@@ -190,7 +188,6 @@ button:focus {outline:0;}
             margin: 50px 0px 50px 0px;
             
             div a{
-
                 color: dimgray;
                 font-weight: 500;
                 font-size: 24px;
@@ -226,7 +223,6 @@ button:focus {outline:0;}
         margin: 30px 0px;
         font-size: 35px;
     }
-
     .product-name, .product-quantity, .product-price{
         margin-top: 50px;
         
@@ -234,13 +230,11 @@ button:focus {outline:0;}
             font-size: 22px;
             font-weight: 500;
         }
-
         #quantity{
             box-shadow: none;
             border-radius: 10px;
         }
     }
-
     .cart-main{
         margin-bottom: 25px;
 
@@ -248,7 +242,6 @@ button:focus {outline:0;}
             margin: 35px 0px;
         }
     }
-
     .cart-summary{
         display: flex;
         flex-direction: column;
@@ -416,9 +409,8 @@ button:focus {outline:0;}
         margin: 30px 0px;
         font-size: 35px;     
     }
-
     .single-order-element{
-        margin: 25px 0px;
+        margin: 25px;
 
         .medium-4, .medium-2, .medium-1{
             margin-top: 25px;
@@ -439,6 +431,31 @@ button:focus {outline:0;}
             border-radius: 25px;
             margin: 0px 25px;
             font-weight: 500;
+        }
+    }
+}
+
+//
+.user-panel{
+
+    .title h2{
+        margin: 30px 0px;
+        font-size: 35px;     
+    }
+
+    .link-wrapper{
+        margin: 30px 0px;
+
+        a{
+            font-size: 24px;
+            margin: 10px 30px 10px 0px;
+            color: #424141;
+        }
+        .router-link-exact-active {
+            font-size: 24px;
+            margin: 10px 30px 10px 0px;
+            color: #424141;
+            border-bottom: 1px solid dimgray;
         }
     }
 }
