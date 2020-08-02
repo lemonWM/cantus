@@ -1,3 +1,5 @@
+import url from "postcss-url"
+
 export const getProducts = {
     computed: {
         
@@ -10,7 +12,13 @@ export const getProducts = {
 
         this.$store.state.productsSelected = []
 
-        this.axios.get(`/Products${window.location.pathname}`) 
+        let urlData = window.location.hash
+
+        let regex = new RegExp("#/","i") 
+
+        let apiPoint = urlData.replace(regex, '')
+
+        this.axios.get(`/Products/${apiPoint}`) 
         .then(({ data })=> {
 
             this.setProductSelected(data)
