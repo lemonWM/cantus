@@ -3,11 +3,22 @@
  A Vue.js e-commerce application.
  Include vue router & store
  
- main features:
+ Client side main features:
  - user register & login panel
  - products shopping cart
  - reactive shopping cart steps with vue store
  - order details panel
+ - product search and sort by category
+ 
+ CSS Foundation freamwork 
+ Sass style
+ 
+ Backend side main features:
+ - Express.js
+ - JSON Web Token authorization
+ - Heroku free server- will be active after short delay for first run
+ 
+ MongoDB database
  
 
 ## Build Setup
