@@ -1,6 +1,14 @@
 # cantus
 
-> A Vue.js shop
+ A Vue.js e-commerce application.
+ Include vue router & store
+ 
+ main features:
+ - user register & login panel
+ - products shopping cart
+ - reactive shopping cart steps with vue store
+ - order details panel
+ 
 
 ## Build Setup
 
