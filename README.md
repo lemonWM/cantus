@@ -16,6 +16,9 @@
  Backend side main features:
  - Express.js
  - JSON Web Token authorization
+ 
+ live:https://cantus.netlify.app/
+ 
  - Heroku free server- will be active after short delay for first run
  
  MongoDB database
