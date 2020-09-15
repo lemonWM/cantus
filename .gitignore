@@ -11,7 +11,7 @@ postcssrc.js*
 editorconfig* 
 editorconfig*
 postcssrc *
-babelrc* 
+babelrc
 
 package-lock.json*
 
