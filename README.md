@@ -15,6 +15,7 @@
  
  Backend side main features:
  - Express.js
+ - bcrypt hashing password
  - JSON Web Token authorization
  
  live:https://cantus.netlify.app/
