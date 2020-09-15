@@ -9,8 +9,12 @@ yarn-error.log*
 temp.json*
 postcssrc.js*
 editorconfig* 
+editorconfig*
+postcssrc *
+babelrc* 
 
-.babelrc 
+package-lock.json*
+
 # Editor directories and files
 .idea
 .vscode
