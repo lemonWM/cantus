@@ -4,11 +4,26 @@
  Include vue router & store
  
  Client side main features:
- - user register & login panel
- - products shopping cart
- - reactive shopping cart steps with vue store
- - order details panel
- - product search and sort by category
+ - user register & login panel (Vuelidate in use)
+ 
+ ![alt](https://res.cloudinary.com/donmoqxem/image/upload/v1601723849/github_markdown/Zrzut_ekranu_2020-10-3_o_13.16.54_pevhrd.png)
+ 
+  - product search and sort by category
+ 
+ ![alt](https://res.cloudinary.com/donmoqxem/image/upload/v1601723711/github_markdown/Zrzut_ekranu_2020-10-3_o_13.09.55_fevhoi.png)
+ 
+ - reactive products shopping cart steps with vue store (for logged user)
+ 
+ ![alt](https://res.cloudinary.com/donmoqxem/image/upload/v1601723711/github_markdown/Zrzut_ekranu_2020-10-3_o_13.10.52_evkajc.png)
+ 
+ - creating order for shopping cart with individual delivery terms and payment methods
+ 
+  ![alt](https://res.cloudinary.com/donmoqxem/image/upload/v1601723711/github_markdown/Zrzut_ekranu_2020-10-3_o_13.11.15_nxztaq.png)
+ 
+ - orders history details panel
+ 
+ ![alt](https://res.cloudinary.com/donmoqxem/image/upload/v1601724107/github_markdown/Zrzut_ekranu_2020-10-3_o_13.21.31_e9tbdv.png)
+
  
  CSS Foundation freamwork 
  Sass style
@@ -16,15 +31,14 @@
  Backend side main features:
  - Express.js
  - bcrypt hashing password
- - JSON Web Token authorization
+ - JSON Web Token authorization & bcript hash password
  
+  MongoDB database
+  
  live:https://cantus.netlify.app/
  
- - Heroku free server- will be active after short delay for first run
- 
- MongoDB database
- 
 
+ 
 ## Build Setup
 
 ``` bash
